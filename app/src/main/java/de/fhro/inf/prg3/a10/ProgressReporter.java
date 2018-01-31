@@ -52,7 +52,7 @@ public class ProgressReporter {
     }
 
     /**
-     * Notifies the reporter that a cook leaved
+     * Notifies the reporter that a cook left
      * if no cooks are working anymore the busy indicator is removed from the view
      */
     public void notifyCookLeaving(){
@@ -64,7 +64,7 @@ public class ProgressReporter {
     }
 
     /**
-     * Notifies the reporter that a waiter leaved
+     * Notifies the reporter that a waiter left
      * if no waiters are working anymore the busy indicator is removed from the view
      */
     public void notifyWaiterLeaving() {
