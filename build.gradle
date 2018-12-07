@@ -7,8 +7,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.0.12"
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.3.1.1"
     }
 }
 
@@ -16,6 +16,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+        // required for circleprogress library
         maven { url "https://jitpack.io" }
     }
 }

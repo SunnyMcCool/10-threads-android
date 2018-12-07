@@ -1,4 +1,4 @@
-package de.fhro.inf.prg3.a10.util;
+package de.thro.inf.prg3.a10.util;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import de.fhro.inf.prg3.a10.R;
+import de.thro.inf.prg3.a10.R;
 
 /**
  * Random cook and waiter name generator

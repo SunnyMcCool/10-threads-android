@@ -1,18 +1,14 @@
-package de.fhro.inf.prg3.a10;
+package de.thro.inf.prg3.a10;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import java.util.Arrays;
+import de.thro.inf.prg3.a10.util.NameGenerator;
 
-import de.fhro.inf.prg3.a10.util.NameGenerator;
-
-import static de.fhro.inf.prg3.a10.TestConstants.LOGGING_TAG;
+import static de.thro.inf.prg3.a10.TestConstants.LOGGING_TAG;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -21,7 +17,6 @@ import static org.junit.Assert.assertNotNull;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-@RunWith(AndroidJUnit4.class)
 public class NameGeneratorTests {
 
     @Test

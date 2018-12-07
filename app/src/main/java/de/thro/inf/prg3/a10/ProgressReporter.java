@@ -1,4 +1,4 @@
-package de.fhro.inf.prg3.a10;
+package de.thro.inf.prg3.a10;
 
 import android.view.View;
 import android.widget.ProgressBar;
@@ -7,7 +7,7 @@ import com.github.lzyzsd.circleprogress.CircleProgress;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import de.fhro.inf.prg3.a10.kitchen.KitchenHatch;
+import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
 
 /**
  * Utility report progress of producers and consumers to the UI

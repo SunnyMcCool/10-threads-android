@@ -1,4 +1,4 @@
-package de.fhro.inf.prg3.a10;
+package de.thro.inf.prg3.a10;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import de.fhro.inf.prg3.a10.kitchen.KitchenHatch;
-import de.fhro.inf.prg3.a10.model.Order;
-import de.fhro.inf.prg3.a10.util.NameGenerator;
+import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
+import de.thro.inf.prg3.a10.model.Order;
+import de.thro.inf.prg3.a10.util.NameGenerator;
 
 public class MainActivity extends AppCompatActivity {
 

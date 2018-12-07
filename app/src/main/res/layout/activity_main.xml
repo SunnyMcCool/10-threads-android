@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.fhro.inf.prg3.a10.MainActivity">
+    tools:context="de.thro.inf.prg3.a10.MainActivity">
 
     <TextView
         android:id="@+id/order_queue_text"

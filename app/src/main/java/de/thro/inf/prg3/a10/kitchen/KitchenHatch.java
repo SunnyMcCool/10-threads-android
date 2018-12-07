@@ -1,7 +1,7 @@
-package de.fhro.inf.prg3.a10.kitchen;
+package de.thro.inf.prg3.a10.kitchen;
 
-import de.fhro.inf.prg3.a10.model.Dish;
-import de.fhro.inf.prg3.a10.model.Order;
+import de.thro.inf.prg3.a10.model.Dish;
+import de.thro.inf.prg3.a10.model.Order;
 
 /**
  * Kitchen hatch instance

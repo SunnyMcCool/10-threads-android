@@ -1,4 +1,4 @@
-package de.fhro.inf.prg3.a10.model;
+package de.thro.inf.prg3.a10.model;
 
 /**
  * Dish instance prepared by a cook

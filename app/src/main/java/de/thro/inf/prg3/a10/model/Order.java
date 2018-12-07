@@ -1,4 +1,4 @@
-package de.fhro.inf.prg3.a10.model;
+package de.thro.inf.prg3.a10.model;
 
 /**
  * Order containing the name of the dish a cook has to prepare
