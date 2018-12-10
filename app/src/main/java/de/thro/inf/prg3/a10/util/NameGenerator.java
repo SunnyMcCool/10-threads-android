@@ -55,6 +55,6 @@ public class NameGenerator {
      * @return random dish name
      */
     public String getDishName(){
-        return dishNames.get(random.nextInt(dishNames.size() - 1));
+        return dishNames.get(random.nextInt(dishNames.size()));
     }
 }
