@@ -7,6 +7,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
+import de.thro.inf.prg3.a10.kitchen.KitchenHatchImpl;
+import de.thro.inf.prg3.a10.kitchen.workers.Cook;
+import de.thro.inf.prg3.a10.kitchen.workers.Waiter;
 import de.thro.inf.prg3.a10.model.Order;
 import de.thro.inf.prg3.a10.util.NameGenerator;
 
@@ -14,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int ORDER_COUNT = 150;
     private static final int KITCHEN_HATCH_SIZE = 100;
-    private static final int COOKS_COUNT = 2;
-    private static final int WAITERS_COUNT = 3;
+    private static final int COOKS_COUNT = 4;
+    private static final int WAITERS_COUNT = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +33,7 @@ public class MainActivity extends AppCompatActivity {
             orders.push(new Order(nameGenerator.getDishName()));
         }
 
-        /* TODO initialize the kitchen hatch
-         * use the constant above to control how many meals may be placed in the hatch */
-        final KitchenHatch kitchenHatch = null;
+        final KitchenHatch kitchenHatch = new KitchenHatchImpl(KITCHEN_HATCH_SIZE, orders);
 
         /* setup progress reporter */
         final ProgressReporter progressReporter = new ProgressReporter.ProgressReporterBuilder()
@@ -50,8 +51,16 @@ public class MainActivity extends AppCompatActivity {
                 /* complete the builder */
                 .createProgressReporter();
 
+        /* Spawn 'cook' threads */
+        for(int i = 0; i < COOKS_COUNT; i++){
+            new Thread(new Cook(nameGenerator.generateName(), kitchenHatch, progressReporter)).start();
+        }
 
-        /* TODO create the cooks and waiters, pass the kitchen hatch and the reporter instance and start them */
+        /* Spawn 'waiter' threads */
+        for(int i = 0; i < WAITERS_COUNT; i++){
+            new Thread(new Waiter(nameGenerator.generateName(), kitchenHatch, progressReporter)).start();
+        }
 
     }
 }
+
