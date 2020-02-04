@@ -105,4 +105,4 @@ The class has 3 methods you have to use:
 * `notifyCookLeaving()` called whenever a cook thread is finished to enable the `ProgressReporter` to remove the `KitchenBusyIndicator` when all cooks are finished
 * `notifyWaiterLeaving()` called whenever a waiter thread is finished to enable the `ProgressReporter` to remove the `WaiterBusyIndicator` when all waiters are finished.
 
-_Details for the interested: every view element has to inherit the `View` class of Android. This class has a method `post()` which accepts a `Runnable`. The passed `Runnable` is then executed in the GUI thread (or main thread). In this manor it's safe to access the GUI elements from another thread because the actual access happens in the GUI thread._
+_Details for the interested: every view element has to inherit the `View` class of Android. This class has a method `post()` which accepts a `Runnable`. The passed `Runnable` is then executed in the GUI thread (or main thread). In this manner it's safe to access the GUI elements from another thread because the actual access happens in the GUI thread._
