@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import de.thro.inf.prg3.a10.kitchen.Cook;
 import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
+import de.thro.inf.prg3.a10.kitchen.KitchenHatchImpl;
+import de.thro.inf.prg3.a10.kitchen.Waiter;
 import de.thro.inf.prg3.a10.model.Order;
 import de.thro.inf.prg3.a10.util.NameGenerator;
 
@@ -49,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
                 .setWaiterCount(WAITERS_COUNT)
                 /* complete the builder */
                 .createProgressReporter();
+
+        /* Spawn 'cook' threads */
+        for(int i = 0; i < COOKS_COUNT; i++){
+            new Thread(new Cook(nameGenerator.generateName(), progressReporter, kitchenHatch)).start();
+        }
+
+        /* Spawn 'waiter' threads */
+        for(int i = 0; i < WAITERS_COUNT; i++){
+            new Thread(new Waiter(nameGenerator.generateName(), progressReporter, kitchenHatch)).start();
+        }
 
 
         /* TODO create the cooks and waiters, pass the kitchen hatch and the reporter instance and start them */
