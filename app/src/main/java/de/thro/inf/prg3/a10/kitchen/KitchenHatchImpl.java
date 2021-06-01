@@ -1,5 +1,7 @@
 package de.thro.inf.prg3.a10.kitchen;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 
 import java.util.Deque;
@@ -14,6 +16,7 @@ public class KitchenHatchImpl implements KitchenHatch {
     private Deque<Order> orders;
     private Deque<Dish> dishes;
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     public KitchenHatchImpl(int maxMeals, Deque<Order> orders) {
         this.maxMeals = maxMeals;
         this.orders = orders;
@@ -25,6 +28,7 @@ public class KitchenHatchImpl implements KitchenHatch {
         return maxMeals;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     public Order dequeueOrder(long timeout) {
         Order o = null;
@@ -45,6 +49,7 @@ public class KitchenHatchImpl implements KitchenHatch {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     public Dish dequeueDish(long timeout) {
         long currentTimeStamp = System.nanoTime();
@@ -79,6 +84,7 @@ public class KitchenHatchImpl implements KitchenHatch {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     public void enqueueDish(Dish m) {
         /* synchronize to avoid unpredictable behavior when multiple cooks are enqueuing dishes at the same time */

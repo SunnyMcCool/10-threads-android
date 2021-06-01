@@ -1,6 +1,8 @@
 package de.thro.inf.prg3.a10;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.Deque;
@@ -8,7 +10,6 @@ import java.util.LinkedList;
 
 import de.thro.inf.prg3.a10.kitchen.Cook;
 import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
-import de.thro.inf.prg3.a10.kitchen.KitchenHatchImpl;
 import de.thro.inf.prg3.a10.kitchen.Waiter;
 import de.thro.inf.prg3.a10.model.Order;
 import de.thro.inf.prg3.a10.util.NameGenerator;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int COOKS_COUNT = 2;
     private static final int WAITERS_COUNT = 3;
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
